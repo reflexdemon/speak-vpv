@@ -1,0 +1,8 @@
+<p>home-page works!</p>
+<div>
+  Type Your Name: <input [(ngModel)]="toSpell" type="text" name="toSpell">
+  <button (click)="spell()">Click Me</button>
+  <ul>
+    <li *ngFor="let item of response"> {{ item }}</li>
+  </ul>
+</div>
