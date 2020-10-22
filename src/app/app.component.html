@@ -1,5 +1,15 @@
-<nav>
-  <a class="button" routerLink="/home" routerLinkActive="activebutton">Home</a> |
-  <a class="button" routerLink="/about" routerLinkActive="activebutton">About</a>
-</nav>
-<router-outlet></router-outlet>
+<header>
+  <nav class="navbar navbar-dark">
+    <button class="btn btn-outline-primary" routerLink="/home" routerLinkActive="btn-primary">Home</button>
+    |
+    <button class="btn btn-outline-primary" routerLink="/about" routerLinkActive="btn-primary">About</button>
+  </nav>
+</header>
+<div class="container-fluid">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<footer class="fixed-bottom">
+  &copy; <a href="https://me.vpv.io/" target="_blank">Venkateswara Venkatraman Prasanna</a> {{year}}
+</footer>
