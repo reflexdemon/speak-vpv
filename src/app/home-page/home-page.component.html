@@ -20,7 +20,7 @@
       Name must be at least 1 characters long.
     </div>
   </div>
-  <button (click)="spell()">Click Me</button>
+  <button (click)="spell()" [disabled]="toSpellId.invalid && (toSpellId.dirty || toSpellId.touched)">Click Me</button>
   <ul>
     <li *ngFor="let item of response"> {{ item }}</li>
   </ul>

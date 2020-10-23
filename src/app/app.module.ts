@@ -19,10 +19,10 @@ import {CommonModule} from '@angular/common';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
-    CommonModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
