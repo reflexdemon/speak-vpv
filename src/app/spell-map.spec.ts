@@ -1,4 +1,4 @@
-import {SpellMap} from './spell-map';
+import { SpellMap } from './spell-map';
 
 describe('SpellMap', () => {
   it('should create an instance', () => {

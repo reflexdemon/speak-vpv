@@ -1,27 +1,13 @@
 <h1>Get your speakable</h1>
 <div>
   Type Your Name:
-  <input
-    [(ngModel)]="toSpell"
-    id="toSpellId"
-    type="text"
-    name="toSpell"
-    required
-    minlength="1"
-    #toSpellId="ngModel"
-  >
-  <div *ngIf="toSpellId.invalid && (toSpellId.dirty || toSpellId.touched)"
-       class="alert alert-danger">
-
-    <div *ngIf="toSpellId.errors.required">
-      Name is required.
-    </div>
-    <div *ngIf="toSpellId.errors.minlength">
-      Name must be at least 1 characters long.
-    </div>
+  <input [(ngModel)]="toSpell" id="toSpellId" type="text" name="toSpell" required minlength="1" #toSpellId="ngModel" />
+  <div *ngIf="toSpellId.invalid && (toSpellId.dirty || toSpellId.touched)" class="alert alert-danger">
+    <div *ngIf="toSpellId.errors.required">Name is required.</div>
+    <div *ngIf="toSpellId.errors.minlength">Name must be at least 1 characters long.</div>
   </div>
   <button (click)="spell()" [disabled]="toSpellId.invalid && (toSpellId.dirty || toSpellId.touched)">Click Me</button>
   <ul>
-    <li *ngFor="let item of response"> {{ item }}</li>
+    <li *ngFor="let item of response">{{ item }}</li>
   </ul>
 </div>
