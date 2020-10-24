@@ -1,9 +1,10 @@
 <header>
-  <nav class="navbar navbar-dark">
-    <button class="btn btn-outline-primary" routerLink="/home" routerLinkActive="btn-primary">Home</button>
-    |
-    <button class="btn btn-outline-primary" routerLink="/about" routerLinkActive="btn-primary">About</button>
-  </nav>
+  <!-- your navs bound to current route fragments -->
+  <ul ngbNav [activeId]="route.fragment | async" class="nav-tabs">
+    <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
+      <a ngbNavLink [routerLink]="link.fragment">{{ link.title }}</a>
+    </li>
+  </ul>
 </header>
 <div class="container-fluid">
   <main>
