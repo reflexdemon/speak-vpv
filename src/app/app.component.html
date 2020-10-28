@@ -1,16 +1,16 @@
-<header>
-  <!-- your navs bound to current route fragments -->
-  <ul ngbNav [activeId]="route.fragment | async" class="nav-tabs">
-    <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
-      <a ngbNavLink [routerLink]="link.fragment">{{ link.title }}</a>
-    </li>
-  </ul>
-</header>
 <div class="container-fluid">
+  <div class="header">
+    <!-- your navs bound to current route fragments -->
+    <ul ngbNav [activeId]="route.fragment" class="nav-tabs nav">
+      <li [ngbNavItem]="link.fragment" *ngFor="let link of links" class="nav-item">
+        <a ngbNavLink [routerLink]="link.fragment">{{ link.title }}</a>
+      </li>
+    </ul>
+  </div>
   <main>
     <router-outlet></router-outlet>
   </main>
+  <div class="fixed-bottom">
+    <p class="align-self-center"> &copy; <a href="https://me.vpv.io/" target="_blank">Venkateswara Venkatraman Prasanna</a> {{ year }}</p>
+  </div>
 </div>
-<footer class="fixed-bottom">
-  &copy; <a href="https://me.vpv.io/" target="_blank">Venkateswara Venkatraman Prasanna</a> {{ year }}
-</footer>
